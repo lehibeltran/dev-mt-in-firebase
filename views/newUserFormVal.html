@@ -1,0 +1,25 @@
+<div id="userD" ng-show="userData">
+    <h1>{{ currentUser.name }}</h1>
+    <h2>{{ currentUser.tagline }}</h2>
+    <p>{{ currentUser.bio }}</p>
+</div>
+<form name="myFormNewUser" class="css-form" ng-show="formNewUser" novalidate>
+    <p>
+        Welcome to <span style="color:#00FFE9">DevMountain</span>
+        Social. <br/>Add Some Info So Friends Can Find you
+    </p>
+        <input class="input" type="text" placeholder="Full Name" name="uname" ng-model="name" required>
+        <span class="error" ng-show="myFormNewUser.uname.$error.required && myFormNewUser.uname.$dirty">Required!</span><br/>
+
+        <input class="input" type="text" placeholder="Tagline" name="utagline" ng-model="tagline" required>
+        <span class="error" ng-show="myFormNewUser.utagline.$error.required && myFormNewUser.utagline.$dirty">Required!</span><br/>
+
+        <input class="input" type="url" placeholder="Profile Image Url" name="uprofilepic" ng-model="profilePic" required>
+        <span class="error" ng-show="myFormNewUser.uprofilepic.$error.required && myFormNewUser.uprofilepic.$dirty">Required!</span><br/>
+        <span ng-show="myFormNewUser.uprofilepic.$error.url">This is not a valid URL.</span>
+
+        <textarea class="input" cols="20" rows="10" placeholder="Bio" name="ubio" ng-model="bio" required> </textarea>
+        <span class="error" ng-show="myFormNewUser.ubio.$error.required && myFormNewUser.ubio.$dirty">Required!</span><br/>
+
+    <button class="l-btn" ng-click="saveUser()">Save User</button>
+</form>

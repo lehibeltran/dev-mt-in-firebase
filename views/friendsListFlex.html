@@ -1,0 +1,13 @@
+<div class="friends-search-input">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button"></button>
+      </span>
+        <input type="text" class="form-control" placeholder="Search for friends" ng-model="searchText">
+    </div>
+</div>
+<section class="friends-content">
+    <div class="friends-page" ng-repeat="friend in friends">
+        <img item="image" ng-src="{{ friend.profilePic }}" alt="{{ friend.name }}" ng-click="loadFriend(friend)"/>
+    </div>
+</section>

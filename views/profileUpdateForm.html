@@ -1,0 +1,17 @@
+<form name="myFormUpdate" id="updateUser" novalidate>
+    <p class="input" style="text-align:center; border: 1px gray;">Profile Settings</p>
+    <input class="input" type="text" placeholder="Full Name" name="pname" ng-model="name" required>
+    <span class="error" ng-show="myFormUpdate.pname.$error.required && myFormUpdate.pname.$dirty">Required!</span><br/>
+
+    <input class="input" type="text" placeholder="Tagline" name="ptagline"ng-model="tagline" required>
+    <span class="error" ng-show="myFormUpdate.ptagline.$error.required && myFormUpdate.ptagline.$dirty">Required!</span><br/>
+
+    <input class="input" type="url" placeholder="Profile Image Url" name="pprofilepic" ng-model="profilePic" required>
+    <span class="error" ng-show="myFormUpdate.pprofilepic.$error.required && myFormUpdate.pprofilepic.$dirty">Required!</span><br/>
+    <span ng-show="myFormUpdate.pprofilepic.$error.url">This is not a valid URL.</span>
+
+    <textarea class="input" cols="20" rows="10" placeholder="Bio" name="pbio" ng-model="bio" required> </textarea>
+    <span class="error" ng-show="myFormUpdate.pbio.$error.required && myFormUpdate.pbio.$dirty">Required!</span><br/>
+
+    <button class="l-btn" ng-click="updateUser()">Update Profile</button>
+</form>

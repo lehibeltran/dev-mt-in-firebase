@@ -1,0 +1,49 @@
+<header id="header">
+    <div id="search" ng-style="searchStyle">
+        <input type="submit" value="" ui-sref="findfriends" alt="search"/>
+    </div>
+    <div id="title">Dev Social</div>
+    <div id="backArrow" ng-style="backArr" ng-show="backArro">
+        <input type="button" value="" alt="search" ui-sref="home"/>
+    </div>
+    <div id="ham" class="btn-group" ng-style="hamStyle">
+        <input type="button" value="" alt="menu" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"
+               ng-show="HamButton"/>
+        <canvas id="canvasProfile" alt="menu" data-toggle="dropdown" class="dropdown-toggle"
+                ng-show="canvasMini"></canvas>
+        <ul class="dropdown-menu">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="profile">Profile</a></li>
+            <li><a ui-sref="findfriends">Find Friends</a></li>
+            <li><a ui-sref="friendslist">View Friends</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="{{ modal }}" data-target="{{ myModal }}" ng-click="logOff(logValue)">{{ logValue }}</a>
+            </li>
+        </ul>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Dev Social Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input class="input" type="text" placeholder="Name" ng-model="username"/>
+                        <br/>
+                        <input class="input" type="text" placeholder="Id" ng-model="password"/>
+                        <br/>
+                        <button class="l-btn" data-dismiss="" ng-click="loginUser(loginObj())">Login</button>
+                        <!--<button class="l-btn" data-dismiss="modal" ng-click="logOff()">LogOff</button>-->
+                    </div>
+                    <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                    <!--</div>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>

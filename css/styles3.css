@@ -1,0 +1,205 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*overflow: auto;*/
+}
+
+body {
+    background-color: white;
+}
+
+#header {
+    /*position:fixed;*/
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+/*#search {*/
+/*height: 100%;*/
+/*display: inline;*/
+/*padding-left: 70px;*/
+/*float: left;*/
+/*}*/
+#title {
+    height: 100%;
+    width: 66px;
+    display: inline;
+}
+
+/*#ham {*/
+/*height: 100%;*/
+/*display: inline;*/
+/*padding-right: 70px;*/
+/*float: right;*/
+/*}*/
+#search input[type="submit"] {
+    background: url("../images/Icons/Search.svg") no-repeat 0 0;
+    cursor: pointer;
+    border: none;
+    height: 42px;
+    width: 66px;
+}
+
+#ham input[type="button"] {
+    background: url("../images/Icons/Ham.svg") no-repeat 0 0;
+    cursor: pointer;
+    border: none;
+    height: 20px;
+    width: 66px;
+}
+
+#backArrow input[type="button"] {
+    background: url("../images/Icons/Back-Arrow.svg") no-repeat 0 0;
+    cursor: pointer;
+    border: none;
+    height: 42px;
+    width: 66px;
+}
+
+#updateUser {
+    width: 80%;
+}
+
+#canvasProfile {
+    border-bottom: 1px solid #00FFE9;
+}
+
+#userD {
+    width: 100%;
+}
+
+/*input[type="submit"]:hover { background: url('../images/Icons/Search.svg') no-repeat 0 -30px; }*/
+.wrapper {
+    width: 80%;
+    height: 75%;
+    margin: 50px 0 0 auto;
+}
+
+.right-pane {
+    width: 60%;
+    float: right;
+}
+
+.left-pane {
+    width: 30%;
+    float: left;
+}
+
+#bottom-nav {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 75%;
+    height: 5%;
+    bottom: 0;
+    padding-top: 10px;
+    border-top: 1px solid #d3d3d3;
+}
+
+#bottom-nav .tab {
+    height: 90%;
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+    color: #d3d3d3;
+}
+
+.input {
+    border: 2px solid #d3d3d3;
+    width: 80%;
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 0 10px 0;
+}
+
+.css-form .input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+}
+
+.css-form .input.ng-valid.ng-touched {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.l-btn {
+    width: 80%;
+    background-color: #00FFE9;
+    border: 1px solid #d3d3d3;
+}
+
+.friends-content {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    width: 50%;
+    height: 480px;
+    border: 1px solid #d3d3d3;
+}
+
+.friends-page img {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+}
+
+.friends-page {
+    width: 160px;
+    height: 160px;
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        width: 100%;
+        margin: 50px 40px 0 20px;
+    }
+
+    #userD {
+        width: 70%;
+    }
+
+    .friends-content {
+        width: 80%;
+    }
+
+    .friends-search-input {
+        width: 100%;
+    }
+
+    .left-pane {
+        width: 40%;
+    }
+
+    .right-pane {
+        width: 60%;
+    }
+}
+
+.friends-page img:hover {
+    border: 1px solid #d3d3d3;
+}
+
+.friends-search-input {
+    width: 50%;
+}
+
+.input-group .input-group-btn button {
+    background: url("../images/Icons/Search.svg") no-repeat 0 0;
+    border: 1px solid #d3d3d3;
+    height: 35px;
+    width: 20px;
+    /*-webkit-appearance: none;*/
+}
